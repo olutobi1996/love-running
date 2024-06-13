@@ -10,7 +10,7 @@
     content="Love Running. Club for running, dublin. Urban running, Ireland. running cross country, Ireland.">
     <meta name="keywords" content="Love running, running club, sport, fitness, health">
      <!-- Title -->
-    </title>Love Running</title>
+    </title></title>
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -23,9 +23,12 @@
     <header> <a href="index.html">
 <h1 id="logo">Love Running</h1>
     </a>
+    <input type="checkbox" id="nav-toggle" name="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+    </label>
     <nav>
-        <ul>
-            <li><a href="">Home</a></li> 
+        <ul id="menu" id="social-networks">
+            <li><a href="" class="active">Home</a></li> 
             <li><a href="">Gallery</a></li>
             <li><a href="">Sign up</a></li>
         </ul>
@@ -34,7 +37,19 @@
 
     <main>Main</main>
 
-    <footer>Footer</footer>
+    <footer>
+        <ul> 
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopner"
+            aria-label="Visit our facebook page(opens in new tab)"><i class="fa-brands fa-facebook"></i></a></li>
 
+            <li><a href="https://www.twiiter.com/" target="_blank" rel="noopner"
+                aria-label="Visit our twitter page(opens in new tab)"><i class="fa-brands fa-twitter"></i></a></li>
+
+                <li><a href="https://www.instagra.com/" target="_blank" rel="noopner"
+                    aria-label="Visit our instagram page(opens in new tab)"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+    </footer>
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/3d96c639d1.js" crossorigin="anonymous"></script>
 </body>
 </html>

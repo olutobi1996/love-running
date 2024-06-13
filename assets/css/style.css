@@ -1,10 +1,10 @@
 /* Google fonts import */
-@<style>
 @import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 /* Asterisk wildcard selector to overide default styles added by the browser */
-{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -21,25 +21,128 @@ body{
 }
 /* header */
 header{
-    background-color: orange;
+    background-color: #ffffff;
+    padding: 0 1 rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+   display: flex;
+   justify-content: space-between;
+   align-content: baseline;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
 }
 
 h1 {
     font-family:'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
 }
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style: none;
+  }
+
+  
+  #menu > li {
+margin-bottom: 1em;
+  }
+
+.active{
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* navbar styles with drop down toggle */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+/* nav toggle */
+#nav-toggle:checked~nav{
+    display: block;
+}
+
+#nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
 /* main */
 main{
     background-color: bisque;
     
     /* Make main element take up any surplus space to push footer down*/
     flex: 1 0 auto;
+    margin-top: 47px;
 }
 /* footer */
-footer{
-    background-color: lavender;
+#social-networks{
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
 }
 .roboto-light {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
   }
+
+  #social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
+  }
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: block;
+        position: 
+        box-shadow; none:
+        width: fit-content;
+        padding-right: 1rem;
+    }
+    #menu{
+        display: flex;
+    }
+    #menu > li {
+        padding-left: 1rem;
+    }
+.nav-toggle-label {
+    display: none;
+}
+#logo {
+    font-size: 100px;
+    line-height: 75px;
+    margin: 0 0.5rem;
+}
+/* main */
+main {
+    /* Push main content down to accomodate large header */
+    margin-top: 79px;
+}
+/* Large devices (laptops & desktops 992px, and up)*/
+@media screen and ( min-width 992px ) {
+    #menu a:hover { 
+        border-bottom: 1px solid #3a3a3a;
+   } 
+}
