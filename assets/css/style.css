@@ -236,9 +236,32 @@ main {
 }
 
 /* Large devices (laptops & desktops 992px, and up)*/
-@media screen and ( min-width 992px ) {
-    #menu a:hover { 
-        border-bottom: 1px solid #3a3a3a;
-   } 
+@media screen and (laptops and desktops 992px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
+@media screen and (min-width 1200px)
+{
+#benefits{
+    display: flex;
+    flex-direction: row;
+}
+#benefits > div {
+    flex: 1;
+}
+#benfits-image{
+    order: 0;
+}
+#benfits-mental{
+    order: 1;
+}
+#benfits-mental > div{
+    align-self: flex-start;
+}
+#benfits-physcal > div {
+    align-items: flex-end;
+}
+}
+    
 
